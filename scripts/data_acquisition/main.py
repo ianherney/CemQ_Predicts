@@ -6,12 +6,14 @@ from pathlib import Path
 
 ## Functions
 
+# funcion para categorizar variables y eliminar datos anomalos 
 def categorizar(df):
     var_numericas = df.columns[3:]
     df = df.replace( {'Error 3000': np.nan, '<NA>': np.nan} )
     df = df.convert_dtypes()
     return df
 
+#funcion para eliminar datos atipicos 
 def filtrar_por_iqr(df, var):
     Q1 = df[var].quantile(0.25)
     Q3 = df[var].quantile(0.75)
@@ -19,6 +21,7 @@ def filtrar_por_iqr(df, var):
     filtro = (df[var] >= (Q1 - 1.5 * IQR)) & (df[var] <= (Q3 + 1.5 * IQR))
     return df[filtro]
 
+# funcion para obtener dataframes por edades de desempeño 
 def obtener_dataframe(df, target):
 
     sortnames = [ 'BOYT1',
@@ -93,15 +96,18 @@ def obtener_dataframe(df, target):
 
     return df
 
+# funcion de carga de datos formato excel
 def load_from_excel(path, sheet_name, engine):
     df = pd.read_excel(path,
                        sheet_name = sheet_name,
                        engine  = engine)[1:]
     return df
 
+# funcion de carga de datos formato csv
 def load_from_csv(path):
     return pd.read_csv(path)
 
+# funcion de carga de datos formato sql - por definir
 def load_sql():
     pass
 
@@ -111,7 +117,7 @@ def features_target(df, drop_cols, y):
     return features, target
 
 # Dataframes
-data = load_from_excel( './data/resistencias.xlsx',
+data = load_from_excel( './data/data_raw.xlsx',
                                   'quimicos',
                                   'openpyxl'
                                  )
