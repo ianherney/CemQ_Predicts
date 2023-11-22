@@ -4,6 +4,7 @@ import joblib
 import numpy as np
 from pathlib import Path
 
+
 ## Functions
 # funcion para categorizar variables y eliminar datos anomalos 
 def categorizar(df):
@@ -90,27 +91,34 @@ def obtener_dataframe(df, target):
     df = df.rename(columns = dict_resistencias)
     df = df[ categoricas + var_quimicas + var_fisicas + resistencias[:resistencias.index(target)+1]]
 
-    path= f'./data/data_{target}.csv'
+    path= f'/content/CemQ_Predicts/data/data_{target}.csv'
     df.to_csv(path, index = False)
 
     return df
 
+# funcion de separación de caracteristicas y variable objetivo
 def features_target(df, drop_cols, y):
     features = df.drop(drop_cols, axis = 1)
     target = df[y]
     return features, target
 
+# funcion de carga de datos formato xls
 def load_from_excel(path, sheet_name, engine):
     df = pd.read_excel(path,
                        sheet_name = sheet_name,
                        engine  = engine)[1:]
     return df
+
+# funcion de carga de datos formato csv
+def load_from_csv(path):
+    return pd.read_csv(path)
     
 # Dataframes
-data = load_from_excel( './data/data_raw.xlsx', 
+data = load_from_excel( '/content/CemQ_Predicts/data/data_raw.xlsx', 
                                   'quimicos',
                                   'openpyxl'
                                  )
+                                 
 
 df_R1 = obtener_dataframe(data, 'R1')
 df_R3 = obtener_dataframe(data, 'R3')
@@ -118,6 +126,6 @@ df_R7 = obtener_dataframe(data, 'R7')
 df_R28 = obtener_dataframe(data, 'R28')
 
 if __name__ == '__main__':
-    df_R1 = load_from_csv( './data/data_R1.csv')
+    df_R1 = load_from_csv( '/content/CemQ_Predicts/data/data_R1.csv')
     features, target = features_target(df_R1, ['Start Time', 'Sortname', 'Location', 'R1'], 'R1')
     print (df_R1.columns)
