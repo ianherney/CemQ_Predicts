@@ -24,7 +24,7 @@ def load_sql():
 
 if __name__ == '__main__':
     # obtener Dataframe
-    data = load_from_excel( './data/data_raw.xlsx',
+    data = load_from_excel( '/content/CemQ_Predicts/data/data_raw.xlsx',
                                       'quimicos',
                                       'openpyxl'
                                     )
