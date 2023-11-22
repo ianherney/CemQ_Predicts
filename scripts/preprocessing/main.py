@@ -3,7 +3,6 @@ import pandas as pd
 import joblib
 import numpy as np
 from pathlib import Path
-from 
 
 ## Functions
 # funcion para categorizar variables y eliminar datos anomalos 
