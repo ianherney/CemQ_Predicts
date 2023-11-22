@@ -120,6 +120,5 @@ df_R28 = obtener_dataframe(data, 'R28')
 
 if __name__ == '__main__':
     df_R1 = load_from_csv( './data/data_R1.csv')
-
-    features, target = utils.features_target(df_R1, ['Start Time', 'Sortname', 'Location', 'R1'], 'R1')
+    features, target = features_target(df_R1, ['Start Time', 'Sortname', 'Location', 'R1'], 'R1')
     print (df_R1.columns)
