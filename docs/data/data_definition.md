@@ -1,25 +1,26 @@
+
 # Definición de los datos
 
 ## Origen de los datos
 
-- [ ] Especificar la fuente de los datos y la forma en que se obtuvieron. 
+- [ ] Datos recolectados del sistema de información de general. 
 
 ## Especificación de los scripts para la carga de datos
 
-- [ ] Especificar los scripts utilizados para la carga de los datos. 
+- [ ] Libreria pandas en python, carga en formato xls y formato csv. 
 
 ## Referencias a rutas o bases de datos origen y destino
 
-- [ ] Especificar las rutas o bases de datos de origen y destino para los datos.
+- [ ] Ruta datos crudos: "/content/CemQ_Predicts/data/data_raw.xlsx"
+- [ ] Ruta datos limpios "/content/CemQ_Predicts/data/*.csv"
 
 ### Rutas de origen de datos
 
-- [ ] Especificar la ubicación de los archivos de origen de los datos.
-- [ ] Especificar la estructura de los archivos de origen de los datos.
-- [ ] Describir los procedimientos de transformación y limpieza de los datos.
+- [ ] Rutas internas de conocimiento privado
+- [ ] Sección LAB-gen
+- [ ] Limpieza de datos corruptos, errores del sistema, se tomo como criterio de aceptación observando e comportamiento normal de la mayoria de los datos, el rango intercuartilico. 
 
 ### Base de datos de destino
 
-- [ ] Especificar la base de datos de destino para los datos.
-- [ ] Especificar la estructura de la base de datos de destino.
-- [ ] Describir los procedimientos de carga y transformación de los datos en la base de datos de destino.
+- [ ] Almacenamiento local, pendiente ruta del sistema
+- [ ] Ruta interna
