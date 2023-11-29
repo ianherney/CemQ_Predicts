@@ -7,6 +7,20 @@ from sklearn.linear_model import ( LinearRegression, Lasso, Ridge, ElasticNet, R
 from sklearn.ensemble import ( GradientBoostingRegressor, RandomForestRegressor)
 from sklearn.model_selection import GridSearchCV
     
+def load_from_csv(path):
+    return pd.read_csv(path)
+
+# funcion de separación de caracteristicas y variable objetivo
+def features_target(df, drop_cols, y):
+    features = df.drop(drop_cols, axis = 1)
+    target = df[y]
+    return features, target
+
+def model_export(model, score):
+        print(score)
+        joblib.dump(model, f'./best_model{score}.pkl')
+
+
 regressors = {            
             'Lasso' : Lasso(alpha = 0.1),
             'Ridge' : Ridge(alpha = 0.3),
@@ -32,9 +46,6 @@ params = {
                 
         }
 
-def model_export(model, score):
-        print(score)
-        joblib.dump(model, f'./best_model{score}.pkl')
 
 def grid_training(features, target):
 
@@ -51,7 +62,12 @@ def grid_training(features, target):
       best_model = grid_reg.best_estimator_
                 
   model_export(best_model, best_score)
-        
+
+
+df_R1 = load_from_csv( './data/data_R1.csv')   
+features, target = features_target(df_R1, ['Start Time', 'Sortname', 'Location', 'R1'], 'R1')   
+grid_training(features, target)
+            
         
                 
                 
