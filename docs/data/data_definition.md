@@ -11,8 +11,8 @@
 
 ## Referencias a rutas o bases de datos origen y destino
 
-- [ ] Ruta datos crudos: "/content/CemQ_Predicts/data/data_raw.xlsx"
-- [ ] Ruta datos limpios "/content/CemQ_Predicts/data/*.csv"
+- [ ] Ruta datos crudos: "./CemQ_Predicts/data/data_raw.xlsx"
+- [ ] Ruta datos limpios "./CemQ_Predicts/data/*.csv"
 
 ### Rutas de origen de datos
 
