@@ -58,10 +58,30 @@ El rendimiento del modelo se evaluó utilizando métricas clave, donde se alcanz
 
 <img src = "https://drive.google.com/uc?export=view&id=165oVRJJfOl8WC_ChscIkA8F4jofd9rjI" alt = "Encabezado Proyecto" width = "20%">  </img>
 
+## Resultados obtenidos en predicciones
+
+Se realiza la evaluación del modelo con distintos datos para evidenciar su comportamiento
+
+En esta ocasion obtendremos adicional a el MSE, el MAPE, con el animo de evaluar el promedio de errores absoulutos en cada una de las predicciones realizadas, obteniendo lo siguiente:
+
+**labels_test**
+
+<img src = "https://drive.google.com/uc?export=view&id=1ztKlTRch87kA5pN5O36KyHW43j4XByvf" alt = "Encabezado Proyecto" width = "80%">  </img>
+
+A manera general, cuanto menor es el valor a predecir, mayor es el MAPE obtenido, y visceversa, sin embargo se evidencia buenos resultados en cuanto a las edades de cementos especiales,
+
+se realiza el mismo ejercicio pero con datos nuevos, pertenecientes al ultimo mes y se obtiene lo siguiente:
+
+**datos_recientes**
+
+<img src = "https://drive.google.com/uc?export=view&id=1izfJCGY4Pt2PZGTl9IXcbaJFFr5KsuE4" alt = "Encabezado Proyecto" width = "80%">  </img>
+
+similar al anterior, cuanto menor es el valor a predecir, mayor es el MAPE obtenido, y visceversa, sin embargo se evidencia valores menores en MAPE en la mayoria de los casos.
+
 
 ## Conclusiones y Recomendaciones
 
-El modelo final, basado en XGBoost, ha superado las expectativas en términos de rendimiento predictivo. Sus fortalezas incluyen una alta capacidad predictiva y una resistencia a la multicolinealidad. Sin embargo, es esencial tener en cuenta las limitaciones del modelo y su aplicabilidad en diferentes contextos. Se recomienda realizar validación adicional en entornos específicos antes de su implementación definitiva.
+El modelo final, basado en XGBoost, ha superado las expectativas en términos de rendimiento predictivo. Sus fortalezas incluyen una alta capacidad predictiva y una resistencia a la multicolinealidad. Sin embargo, es esencial tener en cuenta las limitaciones del modelo y su aplicabilidad en diferentes contextos. Se recomienda realizar validación adicional en entornos específicos antes de su implementación definitiva, se puede llegar a considerar omitir variables de analitos menores que puedan estar generando alteraciones en los resultados, otra posible opcion es considerar las variables de receta y aditivos del cemento
 
 ## Referencias
 
