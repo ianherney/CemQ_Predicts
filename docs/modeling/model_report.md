@@ -30,9 +30,34 @@ Se realizaron distintas prueba con ayuda de MLFlow y optuna, en donde se eligier
 
 - **Xtreme Gradient Boosting Regressor (XGBoost)**: XGBoost es una implementación eficiente y escalable de algoritmos de Gradient Boosting. Combina características como la regularización, la poda de árboles y la gestión de la velocidad de aprendizaje para mejorar la precisión y la generalización del modelo. Es particularmente útil en competiciones de ciencia de datos y se ha convertido en una elección popular para problemas de regresión y clasificación.
 
+### Experimentos:
+
+<img src = "https://drive.google.com/uc?export=view&id=1pvv17xU22Wk2yexvwceoeW7VxifjL8bf" alt = "Encabezado Proyecto" width = "60%">  </img>
+
+Una vista en comparación con los otros modelos se evidencia en la siguiente grafica
+
+<img src = "https://drive.google.com/uc?export=view&id=14tusDvN3ITJT9yY7KK9jDwP4Or_sOerx" alt = "Encabezado Proyecto" width = "60%">  </img>
+
+## Parametros obtenidos
+
+Una vista de los parametros vistos durante la optimización se detalla a continuación
+
+<img src = "https://drive.google.com/uc?export=view&id=1F8j8LB2zvQ8R3g_ZoNU5L7zr8UJMd0JN" alt = "Encabezado Proyecto" width = "60%">  </img>
+
+Obteniendo finalmente los siguientes:
+
+<img src = "https://drive.google.com/uc?export=view&id=19oGgIykh-V_EVVC7TuAS4zOmXJMvCnzz" alt = "Encabezado Proyecto" width = "20%">  </img>
+
+
+
 ## Evaluación del Modelo
 
 El rendimiento del modelo se evaluó utilizando métricas clave, donde se alcanzó un adecuado score y un MSE. Estos resultados indican que el modelo es capaz de realizar predicciones precisas y tiene una capacidad predictiva significativa. La elección de XGBoost se justifica no solo por sus excelentes métricas, sino también por su capacidad para manejar la multicolinealidad, proporcionando una solución robusta y generalizable.
+
+**Metricas obtenidas**
+
+<img src = "https://drive.google.com/uc?export=view&id=165oVRJJfOl8WC_ChscIkA8F4jofd9rjI" alt = "Encabezado Proyecto" width = "20%">  </img>
+
 
 ## Conclusiones y Recomendaciones
 
