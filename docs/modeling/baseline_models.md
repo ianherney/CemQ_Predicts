@@ -4,36 +4,45 @@ Este documento contiene los resultados del modelo baseline.
 
 ## Descripción del modelo
 
-El modelo baseline es el primer modelo construido y se utiliza para establecer una línea base para el rendimiento de los modelos posteriores.
+Modelo de regresion lineal multiple
 
 ## Variables de entrada
 
-Lista de las variables de entrada utilizadas en el modelo.
+Matriz de variables y localizaciones elegidas:
+
+<img src = "https://drive.google.com/uc?export=view&id=1fIZDU7u00JuWytlwjHLKlGBj0YNJgMyV" alt = "Encabezado Proyecto" width = "30%">  </img>
 
 ## Variable objetivo
 
-Nombre de la variable objetivo utilizada en el modelo.
+Resistencia a 1 día
 
 ## Evaluación del modelo
 
 ### Métricas de evaluación
 
-Descripción de las métricas utilizadas para evaluar el rendimiento del modelo.
+Se tomaron dos metricas, siendo ellas el score (**R2**) y como funcion de perdida el **MSE**
 
 ### Resultados de evaluación
 
-Tabla que muestra los resultados de evaluación del modelo baseline, incluyendo las métricas de evaluación.
+Los resultados obtenidos fueron los siguientes:
+
+<img src = "https://drive.google.com/uc?export=view&id=1hC1iaFeEIYZBOEZO6c5hREK8z8Sfi80I" alt = "Encabezado Proyecto" width = "20%">  </img>
 
 ## Análisis de los resultados
 
-Descripción de los resultados del modelo baseline, incluyendo fortalezas y debilidades del modelo.
+valores muy positivos para los conjuntos de entrenamiento y prueba, de manera similar la metrica de evaluación **MAE**
 
+Al realizar una extracción de los coeficiones de cada una de las variables se obtuvo lo sguiente:
+
+<img src = "https://drive.google.com/uc?export=view&id=1xS76cL8tSKQf-I0nVSVKgnM-qXNFP_Q0" alt = "Encabezado Proyecto" width = "30%">  </img>
+
+En este punto podemos detallar que si bien se obtienen buenas predicciones los valores con mas peso en el modelo lineal basico estan siendo puestos por las variables categoricas (transformadas con **OneHotEncoder**) mientras que las demas variables tienen pesos poco significativos, podria inducirse por un fuerte nivel de multicolinearidad, puesto que muchas de las variables estan correlacionadas entre si.
+
+Se abordaron diferentes tipos de modelos y tenicas para aboradar este tema
 ## Conclusiones
 
-Conclusiones generales sobre el rendimiento del modelo baseline y posibles áreas de mejora.
+Si bien se obtienen resultados entre las predicciones y los valores reales aparentemente optimos, el modelo presenta una fuerte incidencia o inclinacion por las variables categoricas dando a ellas unos pesos sobrepropocionados, desdibujando la importancia de las caracterisiticas fisico quimicas del cemento, lo que lleva a replantear el uso de este metodo.
 
 ## Referencias
 
-Lista de referencias utilizadas para construir el modelo baseline y evaluar su rendimiento.
-
-Espero que te sea útil esta plantilla. Recuerda que puedes adaptarla a las necesidades específicas de tu proyecto.
+[Sklearn - Linear_model ](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
