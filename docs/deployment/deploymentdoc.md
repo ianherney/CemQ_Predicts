@@ -40,7 +40,11 @@ VPN compañia
 
 - **Rutas de acceso a los archivos:**  'models:/QP_R1D/Production'
 
-- **Variables de entorno:** server configurado por ahora en local: mlflow.set_tracking_uri("http://localhost:5000")
+- **Variables de entorno:** server configurado por ahora en local:
+
+```python
+ mlflow.set_tracking_uri("http://localhost:5000")
+```
 
 ## Documentación del despliegue
 
