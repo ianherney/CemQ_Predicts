@@ -21,7 +21,7 @@
 
 ### Excluye:
 
-- No incluye variables de operaci{on tales como señales de presiones, temperaturas y o electricas
+- No incluye variables de operaci{on tales como señales de presiones, temperaturas y o electricas, estan seran consideradas en etapas futuras
 
 ## Metodología
 
